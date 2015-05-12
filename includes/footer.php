@@ -6,11 +6,12 @@
         <h4 class="white">About Tech Port Solutions</h4>
         <div class="footer_title_line"></div>
         <ul class="quick_links">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Affiliates</a></li>
-          <li><a href="#">Our History</a></li>
-          <li><a href="#">Support</a></li>
+          <li><a href="about.php">About Us</a></li>
+          <li><a href="contact.php">Contact Us</a></li>
+          <li><a href="services.php">Services</a></li>
+          <li><a href="community.php">Community</a></li>
+          <li><a href="technews.php">Tech News</a></li>
+          <li><a href="contact.php">Contact</a></li>
         </ul>
         <div class="newsletter">
           <p class="padd_bot1 margin_top1"> Sign up for special offers</p>
@@ -26,60 +27,64 @@
         <h4 class="white">Latest Tech News</h4>
         <div class="footer_title_line"></div>
         
-        <div class="post_holder first active">
-        <div class="img_holder">
-        <div class="img"><img src="http://placehold.it/60x60" alt="" class="img_size1"/></div>
-        </div>
-        <div class="text">
-        <a href="#"><span class="bold">News 1</span></a>
-        <p>Lorem ipsum dolor sit et</p>
-        <span class="info">By John Doe / 25 July</span>
-        </div>
-        </div> <!--end item-->
+  <!--News Update PHP/SQL-->
+      <?php
+      //SQL Variables USED
+      //title
+      //article
+      //author
+      //date_submitted
+
+        require('access/sqlconnect.php');
+
         
+
+        //SELECTS LATEST 3 NEWS UPDATES
+        $stmt = "SELECT title, article, author, date_submitted FROM news ORDER BY ID DESC LIMIT 2";
+
+
+        $myData = mysqli_query($mysqli, $stmt);
+
+        while($news = mysqli_fetch_array($myData)){
+        ?>
         <div class="post_holder">
-        <div class="img_holder">
-        <div class="img"><img src="http://placehold.it/60x60" alt="" class="img_size1"/></div>
-        </div>
-        <div class="text">
-        <a href="#"><span class="bold">News 2</span></a>
-        <p>Lorem ipsum dolor sit et</p>
-        <span class="info">By John Doe / 25 July</span>
-        </div>
-        </div> <!--end item-->
-        
-        <div class="post_holder last">
-        <div class="img_holder">
-        <div class="img"><img src="http://placehold.it/60x60" alt="" class="img_size1"/></div>
-        </div>
-        <div class="text">
-        <a href="#"><span class="bold">News 3</span></a>
-        <p>Lorem ipsum dolor sit et</p>
-        <span class="info">By John Doe / 25 July</span>
-        </div>
-        </div> <!--end item-->
-        
-        
-        
+          <div class="img_holder">
+            <div class="img"><img src="http://placehold.it/60x60" alt="" class="img_size1"/></div>
+          </div>
+
+          <div class="text">
+            <a href="#"><span class="bold">
+              <!--SELECT TITLE-->
+                <?php echo $news['title']; ?>
+              </span></a>
+
+              <p>
+              <!--SELECT ARTICLE-->
+                <?php 
+                $first75Chars = substr($news['article'], 0, 75);
+                echo $first75Chars . '...' ; ?>
+              </p>
+
+            <span class="info">
+            <!--SELECT AUTHOR-->
+              By <?php echo $news['author'] . 
+              ' - ' . 
+              //SELECT DATE
+              date("d/m/Y", strtotime($news['date_submitted'])) ?></span>
+
+            <div class="newsLine">
+            
+            </div>
+          </div>
+        </div> 
+
+      <?php
+
+        }
+      ?>        
+
       </div>
       <!--end products and services-->
-      
-   <!--    <div class="one_fourth">
-        <h4 class="white">Products & Services</h4>
-        <div class="footer_title_line"></div>
-        <ul class="quick_links">
-          <li><a href="#">Website Management</a></li>
-          <li><a href="#">Domain Services</a></li>
-          <li><a href="#">Email Services</a></li>
-          <li><a href="#">E-Commerce Services</a></li>
-          <li><a href="#">Scripting & Add-ons</a></li>
-          <li><a href="#">Marketing Services</a></li>
-          <li><a href="#">E-Commerce Services</a></li>
-          <li><a href="#">Scripting & Add-ons</a></li>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Documentation</a></li>
-        </ul>
-      </div> -->
       
       <div class="one_third last">
         <h4 class="white">Legal and Help</h4>
@@ -122,9 +127,6 @@
           <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
           <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
           <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
-          <!-- <li><a href="#"><i class="fa fa-wordpress"></i></a></li> -->
-          <!-- <li><a href="#"><i class="fa fa-android"></i></a></li> -->
     </ul>
     </div>
     </div>
@@ -133,4 +135,5 @@
   
   <a href="#" class="scrollup"></a><!-- end scroll to top of the page--> 
   
-</div></div>
+</div>
+</div>

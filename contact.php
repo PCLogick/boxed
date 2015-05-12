@@ -6,10 +6,13 @@
   <title>Techport Solutions</title>
   <?php include("includes/head.php") ?>
 
+  <!-- forms -->
+  <link rel="stylesheet" href="js/form/sky-forms.css" type="text/css" media="all">
+
 </head>
 
 <body>
-
+        <?php $page = "contact"; ?>
         <?php include("includes/navbar.php"); ?>
 
           <div class="clearfix"></div>
@@ -24,9 +27,9 @@
   <div class="section_holder18">
     <div class="container">
       <div class="pagetitle">
-        <h3>Contact Style One</h3>
+        <h3>Contact Us</h3>
       </div>
-      <div class="pagenation">&nbsp;<a href="index.html">Home</a> <i>/</i> Contact Style One</div>
+      <div class="pagenation">&nbsp;<a href="index.html">Home</a> <i>/</i> Contact Us</div>
     </div>
   </div>
   <!--end pagenation-->
@@ -37,11 +40,6 @@
     
       
  <div class="one_half">
-      
-        <p>Feel free to talk to our online representative at any time you please using our Live Chat system on our website or one of the below instant messaging programs.</p>
-        <br />
-        <p>Please be patient while waiting for response. (24/7 Support!) <strong>Phone General Inquiries: 1-888-123-4567-8900</strong></p>
-        <br /><br />
         
         <form action="demo-contacts.php" method="post" id="sky-form" class="sky-form">
           <h2 class="uppercase"><strong>send us a message</strong></h2>
@@ -91,22 +89,22 @@
       
         <div class="address_info">
         
-          <h3>Address Info</h3>
+          <h3>Contact Information</h3>
           <ul>
-            <h6><strong>Company Name</strong></h6>
-            No.28 - 63739 street lorem ipsum City, Country
+            <h6><strong>Techport Prodigy co.</strong></h6>
+            Bridgeport, Connecticut<br />
+            06606<br />
             <br />
-              Telephone: +1 1234-567-89000<br />
-              FAX: +1 0123-4567-8900<br /><br />
-              E-mail: <a href="mailto:mail@companyname.com">mail@companyname.com</a><br />
-              Website: <a href="index.html">www.yoursitename.com</a> </li>
+              Telephone: +1 (203)981-5879<br />
+              E-mail: <a href="mailto:NicholasAponteIT@gmail.com">NicholasAponteIT@gmail.com</a><br />
+              Website: <a href="index.html">www.TechPortProdigy.com</a> </li>
           </ul>
         </div>
         <h3>Find the Address</h3>
-        <iframe class="google-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=WA,+United+States&amp;aq=0&amp;oq=WA&amp;sll=47.605288,-122.329296&amp;sspn=0.008999,0.016544&amp;ie=UTF8&amp;hq=&amp;hnear=Washington,+District+of+Columbia&amp;t=m&amp;z=7&amp;iwloc=A&amp;output=embed"></iframe>
+        <iframe class="google-map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=CT,+United+States&amp;aq=0&amp;oq=CT&amp;sll=47.605288,-122.329296&amp;sspn=0.008999,0.016544&amp;ie=UTF8&amp;hq=&amp;hnear=Connecticut,Bridgeport&amp;t=m&amp;z=7&amp;iwloc=A&amp;output=embed"></iframe>
         <div class="bottom_strip"></div><div class="bottom_shape"></div>
         <br />
-        <small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=WA,+United+States&amp;aq=0&amp;oq=WA&amp;sll=47.605288,-122.329296&amp;sspn=0.008999,0.016544&amp;ie=UTF8&amp;hq=&amp;hnear=Washington,+District+of+Columbia&amp;t=m&amp;z=7&amp;iwloc=A">View Larger Map</a></small> 
+        <small><a href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=CT,+United+States&amp;aq=0&amp;oq=CT&amp;sll=47.605288,-122.329296&amp;sspn=0.008999,0.016544&amp;ie=UTF8&amp;hq=&amp;hnear=Connecticut,Bridgeport&amp;t=m&amp;z=7&amp;iwloc=A&amp;output=embed">View Larger Map</a></small> 
         
         </div>  
 
